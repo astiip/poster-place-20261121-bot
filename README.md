@@ -7,8 +7,8 @@
 A travel poster for a place that does not exist: **Fernholt**, a town that
 lives inside one colossal hollow tree in a misty emerald forest. Glowing
 amber windows spiral up the trunk, rope bridges join the branches, paper
-lanterns hang in the mist, and a stream winds at its roots. The poster's
-promise is a stay in the branches — lantern light, mist at dawn.
+lanterns hang in the mist, and a stream winds at its roots — the promise
+is a stay in the branches: lantern light, mist at dawn.
 
 The name is set in large cream serif across the misty canopy, with the
 tagline "SLEEP IN THE BRANCHES" beneath it.
@@ -16,7 +16,8 @@ tagline "SLEEP IN THE BRANCHES" beneath it.
 ## Files
 
 - `main.ts` — the entry program (Node 22). Copies `entry.png` to the
-  output directory, byte for byte. No network.
+  output directory, byte for byte. No network. Deterministic: the same
+  poster, byte for byte, on every run.
 - `entry.png` — the poster, 1024×1024, a real PNG under 1 MiB.
 - `scene.png` — the original AI-generated painting of the hollow tree
   (made for this entry, no text in it).

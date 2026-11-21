@@ -7,13 +7,17 @@
 // large cream serif across the misty canopy, with the tagline
 // "SLEEP IN THE BRANCHES" beneath it. The scene is an original AI-generated
 // painting (scene.png, made for this entry); the type is set by build.html
-// and rendered to entry.png. This program copies entry.png to the output
-// directory, byte for byte, so both runs write identical bytes. No network.
+// and rendered to entry.png.
+//
+// Output contract: this program copies entry.png to the output directory,
+// byte for byte, so every run writes identical bytes — the same poster,
+// no re-render, no network.
 import { copyFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
+const ENTRY_FILE = "entry.png";
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "out";
 mkdirSync(outDir, { recursive: true });
-copyFileSync(join(here, "entry.png"), join(outDir, "entry.png"));
+copyFileSync(join(here, ENTRY_FILE), join(outDir, ENTRY_FILE));
