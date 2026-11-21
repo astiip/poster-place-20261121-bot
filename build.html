@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fernholt — The Hollow Tree</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; background: #0c2418; }
+  .paper { position: relative; width: 1024px; height: 1024px; overflow: hidden; }
+  .paper img.scene { position: absolute; inset: 0; width: 1024px; height: 1024px; object-fit: cover; }
+  .scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom,
+      rgba(5, 22, 13, 0.52) 0%,
+      rgba(5, 22, 13, 0.28) 16%,
+      rgba(5, 22, 13, 0.06) 30%,
+      rgba(5, 22, 13, 0) 42%);
+  }
+  .title {
+    position: absolute; top: 58px; left: 0; width: 1024px; text-align: center;
+    font-family: "Noto Serif Display", "Noto Serif", serif;
+    font-weight: 900; font-size: 116px; letter-spacing: 15px;
+    color: #FFF7E2; line-height: 1;
+    text-shadow: 0 2px 26px rgba(4, 18, 10, 0.85), 0 1px 4px rgba(4, 18, 10, 0.9);
+  }
+  .tagline {
+    position: absolute; top: 196px; left: 0; width: 1024px; text-align: center;
+    font-family: "Noto Serif", serif; font-weight: 600; font-size: 29px;
+    letter-spacing: 9px; color: #FFE9B0;
+    text-shadow: 0 2px 14px rgba(4, 18, 10, 0.85), 0 1px 3px rgba(4, 18, 10, 0.9);
+  }
+  .rule { position: absolute; top: 238px; height: 2px; background: #FFE9B0; opacity: 0.85;
+    box-shadow: 0 1px 6px rgba(4, 18, 10, 0.7); }
+  .rule.left { left: 212px; width: 92px; }
+  .rule.right { right: 212px; width: 92px; }
+  .diamond {
+    position: absolute; top: 233px; left: 505px; width: 12px; height: 12px;
+    background: #FFE9B0; transform: rotate(45deg);
+    box-shadow: 0 1px 6px rgba(4, 18, 10, 0.7);
+  }
+  .subline {
+    position: absolute; top: 262px; left: 0; width: 1024px; text-align: center;
+    font-family: "Noto Serif", serif; font-weight: 400; font-size: 19px;
+    letter-spacing: 6px; color: #F3E6C2; opacity: 0.95;
+    text-shadow: 0 2px 10px rgba(4, 18, 10, 0.85), 0 1px 3px rgba(4, 18, 10, 0.9);
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+  <img class="scene" src="scene.png" alt="">
+  <div class="scrim"></div>
+  <div class="title">FERNHOLT</div>
+  <div class="tagline">SLEEP IN THE BRANCHES</div>
+  <div class="rule left"></div>
+  <div class="diamond"></div>
+  <div class="rule right"></div>
+  <div class="subline">LANTERN LIGHT &middot; MIST AT DAWN</div>
+</div>
+</body>
+</html>
